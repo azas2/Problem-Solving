@@ -1,0 +1,27 @@
+class Solution {
+   fun calculateFreq(word:String):IntArray{
+    val freq=IntArray(26)
+    for(char in word){
+        val charIndex=char-'a'
+        if(charIndex in 0..25){
+            freq[charIndex]++
+        }
+    }
+    return  freq
+}
+fun isAnagram(s: String, t: String): Boolean {
+    val checkS=calculateFreq(s)
+    val checkT= calculateFreq(t)
+    if (s.length!=t.length){
+     return false
+    }
+    for (checkIndex in checkT.indices){
+        if(checkT[checkIndex]!= checkS[checkIndex]){
+            return false
+            break
+        }
+    }
+    return true
+}
+
+}
