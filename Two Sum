@@ -1,0 +1,20 @@
+class Solution {
+fun twoSum(nums: IntArray, target: Int): IntArray {
+    var index1:Int=0
+    var index2:Int=0
+    for(ix in 0 until nums.size){
+        for(indextwo in ix+1 until nums.size){
+            if(nums[ix]+nums[indextwo]==target){
+                index1=ix
+                index2=indextwo
+                break
+            }
+        }
+
+
+    }
+    var arrayBack:IntArray= intArrayOf(index1, index2)
+    return arrayBack
+}
+
+}
