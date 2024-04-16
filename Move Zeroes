@@ -1,0 +1,14 @@
+class Solution {
+   fun moveZeroes(nums: IntArray): Unit {
+      var numberOfZero=0
+      for(num in nums){
+        if(num!=0){
+            nums[numberOfZero++]=num
+        }
+      }
+      while(numberOfZero<nums.size){
+        nums[numberOfZero++]=0
+      }
+
+   }
+}
